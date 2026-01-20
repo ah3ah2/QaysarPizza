@@ -20,10 +20,10 @@
 body{
   margin:0;
   font-family:Arial,sans-serif;
-  background:#fff;
+  background:#fff;           /* ✅ خلفية بيضا */
   color:var(--green);
   min-height:100vh;
-  overflow-x:hidden;
+  overflow-x:hidden;         /* ✅ يمنع تداخل/سكرول أفقي على التلفون */
 }
 
 /* ✅ Playful repeating background pattern */
@@ -37,6 +37,7 @@ body::before{
   background-position: center;
   background-size: var(--pattern-size);
 
+  /* ✅ خلي الألوان أقوى + playful */
   filter: saturate(1.35) contrast(1.15);
   opacity: var(--pattern-opacity);
 
@@ -90,7 +91,7 @@ body > *{position:relative; z-index:1;}
 .bannerLeft{display:flex;justify-content:center;}
 .topPill{
   width:min(96%,1200px);
-  background:rgba(245,255,250,.82);
+  background:rgba(245,255,250,.82);  /* ✅ شفافه أكثر من قبل */
   border-radius:999px;
   padding:10px 12px;
   display:flex;
@@ -99,7 +100,7 @@ body > *{position:relative; z-index:1;}
   gap:12px;
   box-shadow:0 10px 24px rgba(0,0,0,.08);
   flex-wrap:wrap;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);        /* ✅ زجاج */
 }
 .topPill > *{white-space:nowrap;}
 
@@ -135,7 +136,7 @@ body > *{position:relative; z-index:1;}
   outline:none;
   font-weight:800;
   color:var(--green);
-  background:rgba(255,255,255,.60);
+  background:rgba(255,255,255,.60);  /* ✅ شفاف أكثر */
   backdrop-filter: blur(4px);
 }
 .searchBox::placeholder{color:rgba(4,116,84,.65);}
@@ -172,7 +173,7 @@ body > *{position:relative; z-index:1;}
 /* Buttons & dropdowns */
 .dropWrap{position:relative}
 .dropBtn,.langBtn{
-  background:rgba(255,255,255,.60);
+  background:rgba(255,255,255,.60);  /* ✅ شفاف أكثر */
   border:1px solid rgba(4,116,84,.22);
   color:var(--green);
   padding:8px 12px;
@@ -188,7 +189,7 @@ body > *{position:relative; z-index:1;}
   top:44px;
   inset-inline-start:0;
   min-width:min(92vw, 320px);
-  background:rgba(255,255,255,.78);
+  background:rgba(255,255,255,.78);  /* ✅ بدل الأبيض الصافي */
   color:var(--green);
   border-radius:14px;
   box-shadow:var(--shadow);
@@ -197,12 +198,12 @@ body > *{position:relative; z-index:1;}
   backdrop-filter: blur(8px);
 }
 
-/* ✅ الحل النهائي: توسيط القوائم على التلفون حتى لو English + وضع أفقي */
-@media (max-width:1024px){
+/* ✅ تعديل مهم: خلي القايمة تتوسّط على الموبايل (مو بس تحت 520px) */
+@media (max-width:720px){
   .dropMenu{
     left:50%;
     right:auto;
-    inset-inline-start:auto;
+    inset-inline-start:auto;     /* override logical start */
     transform:translateX(-50%);
     width:calc(100vw - 20px);
     max-width:420px;
@@ -239,7 +240,7 @@ body > *{position:relative; z-index:1;}
   height:34px;
   border-radius:10px;
   border:1px solid rgba(4,116,84,.22);
-  background:rgba(255,255,255,.60);
+  background:rgba(255,255,255,.60); /* ✅ شفاف أكثر */
   cursor:pointer;
   font-size:16px;
   line-height:1;
@@ -273,7 +274,7 @@ body > *{position:relative; z-index:1;}
   display:block;
   padding:8px 10px;
   border-radius:10px;
-  background:rgba(255,255,255,.12);
+  background:rgba(255,255,255,.12); /* ✅ أخف */
 }
 .locLink:hover{background:rgba(255,255,255,.20);}
 
@@ -289,7 +290,7 @@ body > *{position:relative; z-index:1;}
 .slider{max-width:1040px;margin:18px auto 8px;padding:16px 16px 0;}
 .slides{
   width:min(92%, 1040px);
-  height:420px;
+  height:420px;              /* ✅ ارتفاع ثابت للبانر */
   border-radius:18px;
   overflow:hidden;
   margin:0 auto;
@@ -301,13 +302,19 @@ body > *{position:relative; z-index:1;}
   inset:0;
   width:100%;
   height:100%;
-  object-fit:cover;
-  object-position:center;
+
+  /* ✅ هذا المهم */
+  object-fit:cover;          /* الصورة تملى البانر */
+  object-position:center;    /* تركيز من النص */
+
   opacity:0;
   transition:opacity .35s ease;
 }
 
-.slide.active{opacity:1;}
+.slide.active{
+  opacity:1;
+}
+
 
 /* Tabs */
 .tabs{
@@ -320,7 +327,7 @@ body > *{position:relative; z-index:1;}
   flex-wrap:wrap;
 }
 .tab{
-  background:rgba(255,255,255,.60);
+  background:rgba(255,255,255,.60); /* ✅ شفاف أكثر */
   border:1px solid var(--line);
   padding:9px 14px;
   border-radius:999px;
@@ -333,11 +340,15 @@ body > *{position:relative; z-index:1;}
   backdrop-filter: blur(4px);
 }
 .tab.active{background:var(--red);color:#fff;border-color:var(--red);}
+
+/* ✅ Keep tab icons green (even when active) */
 .tab .tabIcon{color:var(--green);}
 
+/* Tab icon */
 .tabIcon{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;}
 .tabIcon svg{width:16px;height:16px;fill:currentColor;}
 
+/* A small professional badge behind the icon */
 .tabIconBadge{
   width:22px;
   height:22px;
@@ -347,18 +358,23 @@ body > *{position:relative; z-index:1;}
   flex:0 0 22px;
 }
 
+/* Stroke-style icons (green outlines) */
 .tabIconStroke svg{fill:none;stroke:currentColor;}
 .tabIconStroke svg *{fill:none;stroke:currentColor;}
 
+/* ✅ Gallery container (شفاف أكثر) */
 .container{
   max-width:1100px;
   margin:14px auto 80px;
   padding:14px 16px 22px;
-  background:rgba(255,255,255,.06);
+
+  /* ⬇️ الشكل فقط */
+  background:rgba(255,255,255,.06); /* شبه شفاف */
   border-radius:18px;
   box-shadow:none;
   backdrop-filter:none;
 }
+
 
 .gallery{
   display:grid;
@@ -368,7 +384,9 @@ body > *{position:relative; z-index:1;}
 @media (max-width:980px){ .gallery{grid-template-columns:repeat(2,1fr);} }
 @media (max-width:560px){ .gallery{grid-template-columns:1fr;} }
 
+/* ✅ Card container (شفاف أكثر) */
 .card{
+  /* لون خلفية الكاردات (بدون ما نأثر على الصور) */
   background:#fffbea;
   border-radius:16px;
   overflow:hidden;
@@ -383,6 +401,7 @@ body > *{position:relative; z-index:1;}
 }
 .card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.14);}
 
+/* ❌ لا نغير شفافيه الصورة نفسها */
 .card img{
   width:100%;
   height:170px;
@@ -398,6 +417,7 @@ body > *{position:relative; z-index:1;}
   color:var(--green);
 }
 
+/* price line */
 .cardPrice{
   text-align:center;
   margin-top:6px;
@@ -406,6 +426,7 @@ body > *{position:relative; z-index:1;}
   color:rgba(4,116,84,.92);
 }
 
+/* smaller drink cards */
 .card.drink{
   padding:10px;
   min-height:170px;
@@ -500,9 +521,7 @@ body.bar-open .pizzaSidebar{
 .socialIcon:hover{transform:scale(1.12);}
 .socialIcon svg{width:24px;height:24px}
 .socialIcon.facebook{color:#1877F2;}
-/* ✅ إصلاح */
-.socialIcon.whatsapp{color:#25D366;}
-
+socialIcon.whatsapp{color:#25D366;}
 @media (max-width:768px){
   .bottomFooter{bottom:14px;left:14px}
   .socialIcon{width:46px;height:46px}
@@ -519,12 +538,15 @@ body.bar-open .pizzaSidebar{
 
 /* =========================================================
    ✅ Mobile-first polish (Web + Phone)
+   هدفها: ما يصير تداخل/تكسير عناصر لما نفتح على التلفون
    ========================================================= */
 
 @media (max-width: 720px){
+  /* Reduce fixed corner logo so it doesn't cover banner */
   .cornerLogo{top:8px; right:10px;}
   .cornerLogo img{height:42px;}
 
+  /* Banner becomes a neat stack */
   .topPill{
     width:100%;
     border-radius:18px;
@@ -533,6 +555,7 @@ body.bar-open .pizzaSidebar{
     justify-content:flex-start;
   }
 
+  /* Search takes a full row */
   .searchWrap{
     width:100%;
     flex:1 1 100%;
@@ -545,12 +568,14 @@ body.bar-open .pizzaSidebar{
     max-width:none;
   }
 
+  /* Buttons & dropdowns align nicely */
   .dropWrap{flex:1 1 100%; width:100%;}
   .dropBtn,.langBtn{
     width:100%;
     justify-content:center;
   }
 
+  /* Slider height adapts on phones */
   .slides{height:260px;}
 }
 
@@ -558,6 +583,7 @@ body.bar-open .pizzaSidebar{
   .cornerLogo{top:6px; right:8px;}
   .cornerLogo img{height:38px;}
 
+  /* Tabs: make them scroll horizontally instead of wrapping into many lines */
   .tabs{
     justify-content:flex-start;
     flex-wrap:nowrap;
@@ -565,13 +591,15 @@ body.bar-open .pizzaSidebar{
     overflow-y:hidden;
     -webkit-overflow-scrolling:touch;
     padding-bottom:10px;
-    scrollbar-width:none;
+    scrollbar-width:none; /* Firefox */
   }
-  .tabs::-webkit-scrollbar{display:none;}
+  .tabs::-webkit-scrollbar{display:none;} /* Chrome/Safari */
   .tab{flex:0 0 auto;}
 
+  /* Reduce slider a bit more */
   .slides{height:220px;}
 
+  /* Footer icons: make them row so they don't cover cards */
   .bottomFooter{
     left:50%;
     transform:translateX(-50%);
@@ -586,6 +614,8 @@ body.bar-open .pizzaSidebar{
 
 @media (max-width: 420px){
   .slides{height:200px;}
+
+  /* Modal spacing on very small devices */
   .pizzaSidebar{width:94vw;}
   .sidebarContent{padding:12px;}
   .sidebarImage{min-height:220px;}
