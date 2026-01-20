@@ -229,18 +229,18 @@ const items = [
   { id:"side-2", cat:"sides", img:"images/wings BBQ.jpg", name:{ar:"اجنحة باربكيو صوص", en:"BBQ Wings"}, desc:{ar:"أجنحة دجاج بصوص باربكيو غني—نكهة مدخّنة ومحبة للجميع.", en:"Juicy chicken wings coated with rich BBQ sauce."}, price:"2.70" },
   { id:"side-3", cat:"sides", img:"images/boneless.jpg", name:{ar:"اجنحة بدون عظم", en:"Boneless Wings"}, desc:{ar:"قطع دجاج بدون عظم مقرمشة وسهلة الأكل—مناسبة للمشاركة.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"2.70" },
   { id:"side-5", cat:"sides", img:"images/oreintal wings_Artboard 1 copy 6.jpg", name:{ar:"اجنحة شرقيه", en:"Oriental Wings"}, desc:{ar:"أجنحة شرقية بتتبيلة خاصة ونكهات عربية مميزة.", en:"Chicken wings seasoned with oriental spices."}, price:"2.70" },
-  { id:"side-4", cat:"sides", img:"images/4x4.jpg", name:{ar:"4x4", en:"4x4"}, desc:{ar:"وجبة 4×4 مناسبة للمشاركة—خيار مشبع وممتع.", en:"4x4 meal suitable for sharing—a satisfying and enjoyable option."}, price:"4.00" },
-  { id:"side-6", cat:"sides", img:"images/cheese garlic bread.jpg", name:{ar:"خبز بالجبنه و الثوم", en:"cheese garlic bread"}, desc:{ar:"خبز بالثوم والجبنة—مقرمش من الأطراف وغني بالجبنة.", en:"Garlic and cheese bread—crispy on the edges and rich in cheese."}, price:"1.75" },
-  { id:"side-7", cat:"sides", img:"images/french fries.jpg", name:{ar:"بطاطا فرايز", en:"french fries"}, desc:{ar:"بطاطا فرايز مقرمشة—خفيفة ولذيذة.", en:"Crispy potato fries—light and delicious."}, price:"1.00" },
-  { id:"side-8", cat:"sides", img:"images/garlic bread.jpg", name:{ar:"خبز بالثوم", en:"garlic bread"}, desc:{ar:"خبز بالثوم بطعم غني ولمسة زبدة.", en:"Garlic bread with a rich flavor and a touch of butter."}, price:"1.00" },
-  { id:"side-9", cat:"sides", img:"images/lasagnia.jpg", name:{ar:"لزانيا", en:"lasagnia"}, desc:{ar:"لازانيا بصلصة غنية وجبنة ذائبة—وجبة مشبعة.", en:"Lasagna with a rich sauce and melted cheese—a filling meal."}, price:"4.00" },
-  { id:"side-10", cat:"sides", img:"images/mozarella sticks.jpg", name:{ar:"موزريلا ستيك", en:"mozarella sticks"}, desc:{ar:"أصابع موزريلا مقرمشة بجبنة ذائبة من الداخل.", en:"Crispy mozzarella sticks with melted cheese inside."}, price:"2.25" },
-  { id:"side-11", cat:"sides", img:"images/msahab chicken.jpg", name:{ar:"دجاج مسحب", en:"msahab chicken"}, desc:{ar:"دجاج مسحب مقرمش—مناسب كوجبة جانبية.", en:"Crispy pulled chicken—suitable as a side dish."}, price:"2.25" },
-  { id:"side-12", cat:"sides", img:"images/nuggets.jpg", name:{ar:"نجيتس ", en:"nuggets"}, desc:{ar:"نجتس دجاج مقرمشة—خيار خفيف وسريع.", en:"Crispy chicken nuggets—a light and quick option."}, price:"2.25" },
-  { id:"side-13", cat:"sides", img:"images/pepproni garlic bread.jpg", name:{ar:"خبز بالثوم بالجبنه مع الببروني", en:"pepproni garlic cheese bread"}, desc:{ar:"خبز بالثوم والجبنة مع ببروني—نكهة أقوى ولمسة مميزة.", en:"Garlic bread and cheese with pepperoni—a stronger flavor and a distinctive touch."}, price:"1.75" },
-  { id:"side-14", cat:"sides", img:"images/Potato wedges.jpg", name:{ar:"بطاطا ويدجز", en:"Potato wedges"}, desc:{ar:"بطاطا ويدجز بتتبيلة خاصة—مقرمشة وشهية.", en:"Potato wedges with a special seasoning—crispy and delicious."}, price:"2.00" },
-  { id:"side-15", cat:"sides", img:"images/salad buffet.jpg", name:{ar:"بوفيه السلطه", en:"salad buffet"}, desc:{ar:"بوفيه سلطة طازج بتشكيلة متنوعة.", en:"A fresh salad buffet with a diverse selection."}, price:"3.50" },
-  { id:"side-16", cat:"sides", img:"images/WINGS PARTY.jpg", name:{ar:"حفله الأجنحه", en:"Wings Party"}, desc:{ar:"حفلة الأجنحة—تشكيلة أجنحة مناسبة للمشاركة.", en:"Wings Party—A selection of wings suitable for sharing."}, price:"4.00" },
+  { id:"side-4", cat:"sides", img:"images/4x4.jpg", name:{ar:"4x4", en:"4x4"}, desc:{ar:"وجبة 4×4 مناسبة للمشاركة—خيار مشبع وممتع.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"4.00" },
+  { id:"side-6", cat:"sides", img:"images/cheese garlic bread.jpg", name:{ar:"خبز بالجبنه و الثوم", en:"cheese garlic bread"}, desc:{ar:"خبز بالثوم والجبنة—مقرمش من الأطراف وغني بالجبنة.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"1.75" },
+  { id:"side-7", cat:"sides", img:"images/french fries.jpg", name:{ar:"بطاطا فرايز", en:"french fries"}, desc:{ar:"بطاطا فرايز مقرمشة—خفيفة ولذيذة.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"1.00" },
+  { id:"side-8", cat:"sides", img:"images/garlic bread.jpg", name:{ar:"خبز بالثوم", en:"garlic bread"}, desc:{ar:"خبز بالثوم بطعم غني ولمسة زبدة.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"1.00" },
+  { id:"side-9", cat:"sides", img:"images/lasagnia.jpg", name:{ar:"لزانيا", en:"lasagnia"}, desc:{ar:"لازانيا بصلصة غنية وجبنة ذائبة—وجبة مشبعة.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"4.00" },
+  { id:"side-10", cat:"sides", img:"images/mozarella sticks.jpg", name:{ar:"موزريلا ستيك", en:"mozarella sticks"}, desc:{ar:"أصابع موزريلا مقرمشة بجبنة ذائبة من الداخل.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"2.25" },
+  { id:"side-11", cat:"sides", img:"images/msahab chicken.jpg", name:{ar:"دجاج مسحب", en:"msahab chicken"}, desc:{ar:"دجاج مسحب مقرمش—مناسب كوجبة جانبية.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"2.25" },
+  { id:"side-12", cat:"sides", img:"images/nuggets.jpg", name:{ar:"نجيتس ", en:"nuggets"}, desc:{ar:"نجتس دجاج مقرمشة—خيار خفيف وسريع.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"2.25" },
+  { id:"side-13", cat:"sides", img:"images/pepproni garlic bread.jpg", name:{ar:"خبز بالثوم بالجبنه مع الببروني", en:"pepproni garlic cheese bread"}, desc:{ar:"خبز بالثوم والجبنة مع ببروني—نكهة أقوى ولمسة مميزة.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"1.75" },
+  { id:"side-14", cat:"sides", img:"images/Potato wedges.jpg", name:{ar:"بطاطا ويدجز", en:"Potato wedges"}, desc:{ar:"بطاطا ويدجز بتتبيلة خاصة—مقرمشة وشهية.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"2.00" },
+  { id:"side-15", cat:"sides", img:"images/salad buffet.jpg", name:{ar:"بوفيه السلطه", en:"salad buffet"}, desc:{ar:"بوفيه سلطة طازج بتشكيلة متنوعة.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"3.50" },
+  { id:"side-16", cat:"sides", img:"images/WINGS PARTY.jpg", name:{ar:"حفله الأجنحه", en:"Wings Party"}, desc:{ar:"حفلة الأجنحة—تشكيلة أجنحة مناسبة للمشاركة.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"4.00" },
   
   
 
@@ -375,6 +375,9 @@ function applyLang(l){
   searchBox && (searchBox.placeholder = ui[l].top.searchPlaceholder);
   txtNearest && (txtNearest.textContent = ui[l].top.nearest);
 
+  // ✅ Branch names inside dropdowns should switch language too
+  updateBranchMenus(l);
+
   tabAll.textContent = ui[l].tabs.all;
   setTabLabel(tabVeg, tabVegTxt, ui[l].tabs.veg);
   setTabLabel(tabMeat, tabMeatTxt, ui[l].tabs.meat);
@@ -487,6 +490,42 @@ function _findBranchByAddress(addrText){
     if(tokens.some(t => t && hay.includes(t))) return b;
   }
   return null;
+}
+
+// Update branch labels inside the two dropdown menus when language changes
+function updateBranchMenus(currentLang){
+  const isAr = currentLang === "ar";
+
+  // 1) "موقع افرعنا" menu (anchors)
+  document.querySelectorAll("#menuLocations .locLink").forEach((a)=>{
+    if(!a) return;
+    if(!a.dataset.ar) a.dataset.ar = (a.textContent || "").trim();
+    const baseLabel = (a.dataset.ar || "").trim();
+
+    if(isAr){
+      a.textContent = baseLabel;
+      return;
+    }
+
+    // Try to match using existing branch aliases (very forgiving)
+    const b = _findBranchByAddress(baseLabel) || _findBranchByAddress("شارع " + baseLabel);
+    a.textContent = b?.en || baseLabel;
+  });
+
+  // 2) "الافرع المتوفر بها صاله" menu (spans)
+  document.querySelectorAll("#menuDineIn .locText").forEach((s)=>{
+    if(!s) return;
+    if(!s.dataset.ar) s.dataset.ar = (s.textContent || "").trim();
+    const baseLabel = (s.dataset.ar || "").trim();
+
+    if(isAr){
+      s.textContent = baseLabel;
+      return;
+    }
+
+    const b = _findBranchByAddress(baseLabel) || _findBranchByAddress("شارع " + baseLabel);
+    s.textContent = b?.en || baseLabel;
+  });
 }
 
 function _fallbackBranchByGov(addrObj){
@@ -628,15 +667,19 @@ function imgError(img){
 
 function safeImgTag(primarySrc, alt, fallbackSrc){
   const fb = fallbackSrc || "";
-  return `<img src="${primarySrc}" alt="${alt}" data-orig="${primarySrc}" data-fallback="${fb}" onerror="imgError(this)">`;
+  // Lazy loading + async decoding reduce jank on long menus (especially on mobile)
+  return `<img src="${primarySrc}" alt="${alt}" loading="lazy" decoding="async" data-orig="${primarySrc}" data-fallback="${fb}" onerror="imgError(this)">`;
 }
 
 /* ========= Render cards ========= */
+let _renderSeq = 0;
 function render(){
   if(!gallery) return;
-  gallery.innerHTML = "";
-  const q = (searchText || "").trim().toLowerCase();
 
+  const seq = ++_renderSeq; // cancel any previous in-flight chunk render
+  gallery.innerHTML = "";
+
+  const q = (searchText || "").trim().toLowerCase();
   const filtered = items.filter(it => {
     const inCat = (cat === "all" ? ALL_TAB_CATS.has(it.cat) : it.cat === cat);
     if(!inCat) return false;
@@ -647,29 +690,44 @@ function render(){
     return name.includes(q) || desc.includes(q);
   });
 
-  filtered.forEach((it)=>{
-    const card = document.createElement("div");
-    card.className = "card" + (it.cat === "drinks" ? " drink" : "");
-    card.dataset.id = it.id;
+  // Chunked rendering keeps the UI responsive when there are lots of items.
+  const CHUNK = 24;
+  let i = 0;
 
-    const n = it.name?.[lang] || "";
-    const showPrice = it.price != null && String(it.price).trim() !== "";
+  function paintChunk(){
+    if(seq !== _renderSeq) return;
+    const frag = document.createDocumentFragment();
 
-    const priceLine = showPrice
-      ? `<div class="cardPrice">${ui[lang].labels.price}: ${it.price}</div>`
-      : "";
+    for(let c = 0; c < CHUNK && i < filtered.length; c++, i++){
+      const it = filtered[i];
 
-    const { primary, fallback } = resolveImgSrc(it);
+      const card = document.createElement("div");
+      card.className = "card" + (it.cat === "drinks" ? " drink" : "");
+      card.dataset.id = it.id;
 
-    card.innerHTML = `
-      ${safeImgTag(primary, n, fallback)}
-      <div class="cardName">${n}</div>
-      ${priceLine}
-    `;
+      const n = it.name?.[lang] || "";
+      const showPrice = it.price != null && String(it.price).trim() !== "";
 
-    card.addEventListener("click", ()=> showItemDetails(it.id));
-    gallery.appendChild(card);
-  });
+      const priceLine = showPrice
+        ? `<div class="cardPrice">${ui[lang].labels.price}: ${it.price}</div>`
+        : "";
+
+      const { primary, fallback } = resolveImgSrc(it);
+      card.innerHTML = `
+        ${safeImgTag(primary, n, fallback)}
+        <div class="cardName">${n}</div>
+        ${priceLine}
+      `;
+
+      card.addEventListener("click", ()=> showItemDetails(it.id));
+      frag.appendChild(card);
+    }
+
+    gallery.appendChild(frag);
+    if(i < filtered.length) requestAnimationFrame(paintChunk);
+  }
+
+  paintChunk();
 }
 
 /* ========= Modal ========= */
