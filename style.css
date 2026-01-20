@@ -198,15 +198,23 @@ body > *{position:relative; z-index:1;}
   backdrop-filter: blur(8px);
 }
 
-/* ✅ تعديل مهم: خلي القايمة تتوسّط على الموبايل (مو بس تحت 520px) */
-@media (max-width:720px){
+/* ✅ FIX نهائي للموبايل (Arabic/English): خلي القائمة بالوسط وبـ fixed */
+@media (max-width:1024px){
   .dropMenu{
-    left:50%;
-    right:auto;
-    inset-inline-start:auto;     /* override logical start */
-    transform:translateX(-50%);
-    width:calc(100vw - 20px);
-    max-width:420px;
+    position:fixed !important;
+    left:50% !important;
+    right:auto !important;
+    inset-inline-start:auto !important;
+    transform:translateX(-50%) !important;
+
+    /* مكانها تحت البانر */
+    top:160px !important;              /* ✅ إذا بدك ارفعها/انزلها عدّل الرقم */
+    width:min(92vw, 420px) !important;
+
+    max-height:65vh !important;
+    overflow:auto !important;
+
+    z-index:9999 !important;
   }
 }
 
@@ -375,7 +383,6 @@ body > *{position:relative; z-index:1;}
   backdrop-filter:none;
 }
 
-
 .gallery{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
@@ -386,7 +393,6 @@ body > *{position:relative; z-index:1;}
 
 /* ✅ Card container (شفاف أكثر) */
 .card{
-  /* لون خلفية الكاردات (بدون ما نأثر على الصور) */
   background:#fffbea;
   border-radius:16px;
   overflow:hidden;
@@ -521,7 +527,9 @@ body.bar-open .pizzaSidebar{
 .socialIcon:hover{transform:scale(1.12);}
 .socialIcon svg{width:24px;height:24px}
 .socialIcon.facebook{color:#1877F2;}
-socialIcon.whatsapp{color:#25D366;}
+/* ✅ تصحيح الواتساب */
+.socialIcon.whatsapp{color:#25D366;}
+
 @media (max-width:768px){
   .bottomFooter{bottom:14px;left:14px}
   .socialIcon{width:46px;height:46px}
@@ -538,7 +546,6 @@ socialIcon.whatsapp{color:#25D366;}
 
 /* =========================================================
    ✅ Mobile-first polish (Web + Phone)
-   هدفها: ما يصير تداخل/تكسير عناصر لما نفتح على التلفون
    ========================================================= */
 
 @media (max-width: 720px){
