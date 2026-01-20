@@ -197,11 +197,13 @@ body > *{position:relative; z-index:1;}
   z-index:70;
   backdrop-filter: blur(8px);
 }
-@media (max-width:520px){
+
+/* ✅ تعديل مهم: خلي القايمة تتوسّط على الموبايل (مو بس تحت 520px) */
+@media (max-width:720px){
   .dropMenu{
     left:50%;
     right:auto;
-    inset-inline-start:auto;
+    inset-inline-start:auto;     /* override logical start */
     transform:translateX(-50%);
     width:calc(100vw - 20px);
     max-width:420px;
@@ -519,7 +521,7 @@ body.bar-open .pizzaSidebar{
 .socialIcon:hover{transform:scale(1.12);}
 .socialIcon svg{width:24px;height:24px}
 .socialIcon.facebook{color:#1877F2;}
-.socialIcon.whatsapp{color:#25D366;}
+socialIcon.whatsapp{color:#25D366;}
 @media (max-width:768px){
   .bottomFooter{bottom:14px;left:14px}
   .socialIcon{width:46px;height:46px}
