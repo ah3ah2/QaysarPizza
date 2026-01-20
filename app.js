@@ -287,9 +287,38 @@ let searchText = "";
 // Includes the new "selected" pizzas so they also show under "الكل".
 const ALL_TAB_CATS = new Set(["veg","meat","sea","chicken","selected","sandwiches","sides","drinks","new","offers"]);
 
+/* ========= Fast indexes (performance) ========= */
+// Precompute searchable text and group items by category to avoid scanning the whole list every render.
+const _itemsByCat = new Map();
+const _allItems = [];
+for (const it of items){
+  const c = it.cat || 'all';
+  if(!_itemsByCat.has(c)) _itemsByCat.set(c, []);
+  _itemsByCat.get(c).push(it);
+
+  // cache lowercase search text for both languages
+  const ar = `${it.name?.ar || ''} ${it.desc?.ar || ''}`.toLowerCase();
+  const en = `${it.name?.en || ''} ${it.desc?.en || ''}`.toLowerCase();
+  it._q = { ar, en };
+
+  if (ALL_TAB_CATS.has(c)) _allItems.push(it);
+}
+
+function getBaseList(){
+  return cat === 'all' ? _allItems : (_itemsByCat.get(cat) || []);
+}
+
 /* ========= Elements ========= */
 const langBtn = document.getElementById("langBtn");
 const gallery = document.getElementById("gallery");
+
+// Event delegation (faster than adding a click listener per card)
+gallery?.addEventListener('click', (e)=>{
+  const card = e.target.closest('.card');
+  if(!card || !gallery.contains(card)) return;
+  const id = card.dataset.id;
+  if(id) showItemDetails(id);
+});
 const tabs = document.getElementById("tabs");
 const searchBox = document.getElementById("searchBox");
 const btnNearest = document.getElementById("btnNearest");
@@ -375,9 +404,6 @@ function applyLang(l){
   searchBox && (searchBox.placeholder = ui[l].top.searchPlaceholder);
   txtNearest && (txtNearest.textContent = ui[l].top.nearest);
 
-  // ✅ Branch names inside dropdowns should switch language too
-  updateBranchMenus(l);
-
   tabAll.textContent = ui[l].tabs.all;
   setTabLabel(tabVeg, tabVegTxt, ui[l].tabs.veg);
   setTabLabel(tabMeat, tabMeatTxt, ui[l].tabs.meat);
@@ -400,6 +426,9 @@ function applyLang(l){
   activeBtn?.classList.add("active");
   cat = activeBtn?.dataset?.cat || "all";
 
+  // Update static branch names in the dropdowns
+  applyBranchNames();
+
   render();
 }
 
@@ -419,12 +448,14 @@ tabs?.addEventListener("click",(e)=>{
   btn.classList.add("active");
 
   cat = btn.dataset.cat || "all";
+
   render();
 });
 
 /* ========= Search ========= */
 searchBox?.addEventListener("input",(e)=>{
   searchText = e.target.value || "";
+
   render();
 });
 
@@ -461,6 +492,30 @@ for (let i = BRANCHES.length - 1; i >= 0; i--) {
   else _seen.add(k);
 }
 
+/* ========= Branch name i18n (dropdown lists) ========= */
+function _normArBranch(s){
+  return (s || '')
+    .trim()
+    .replace(/^شارع\s+/,'')
+    .replace(/[إأآ]/g,'ا')
+    .replace(/ة/g,'ه')
+    .replace(/ى/g,'ي')
+    .replace(/ؤ/g,'و')
+    .replace(/ئ/g,'ي')
+    .replace(/\s+/g,' ');
+}
+
+const _branchArToEn = new Map(BRANCHES.map(b => [b.ar, b.en]));
+const _branchNormToEn = new Map(BRANCHES.map(b => [_normArBranch(b.ar), b.en]));
+
+function applyBranchNames(){
+  document.querySelectorAll('[data-branch-ar]').forEach(el => {
+    const ar = el.getAttribute('data-branch-ar') || el.textContent.trim();
+    const en = _branchArToEn.get(ar) || _branchNormToEn.get(_normArBranch(ar)) || ar;
+    el.textContent = (lang === 'ar') ? ar : en;
+  });
+}
+
 function _normalize(s){
   return (s || "")
     .toString()
@@ -490,42 +545,6 @@ function _findBranchByAddress(addrText){
     if(tokens.some(t => t && hay.includes(t))) return b;
   }
   return null;
-}
-
-// Update branch labels inside the two dropdown menus when language changes
-function updateBranchMenus(currentLang){
-  const isAr = currentLang === "ar";
-
-  // 1) "موقع افرعنا" menu (anchors)
-  document.querySelectorAll("#menuLocations .locLink").forEach((a)=>{
-    if(!a) return;
-    if(!a.dataset.ar) a.dataset.ar = (a.textContent || "").trim();
-    const baseLabel = (a.dataset.ar || "").trim();
-
-    if(isAr){
-      a.textContent = baseLabel;
-      return;
-    }
-
-    // Try to match using existing branch aliases (very forgiving)
-    const b = _findBranchByAddress(baseLabel) || _findBranchByAddress("شارع " + baseLabel);
-    a.textContent = b?.en || baseLabel;
-  });
-
-  // 2) "الافرع المتوفر بها صاله" menu (spans)
-  document.querySelectorAll("#menuDineIn .locText").forEach((s)=>{
-    if(!s) return;
-    if(!s.dataset.ar) s.dataset.ar = (s.textContent || "").trim();
-    const baseLabel = (s.dataset.ar || "").trim();
-
-    if(isAr){
-      s.textContent = baseLabel;
-      return;
-    }
-
-    const b = _findBranchByAddress(baseLabel) || _findBranchByAddress("شارع " + baseLabel);
-    s.textContent = b?.en || baseLabel;
-  });
 }
 
 function _fallbackBranchByGov(addrObj){
@@ -667,68 +686,85 @@ function imgError(img){
 
 function safeImgTag(primarySrc, alt, fallbackSrc){
   const fb = fallbackSrc || "";
-  // Lazy loading + async decoding reduce jank on long menus (especially on mobile)
-  return `<img src="${primarySrc}" alt="${alt}" loading="lazy" decoding="async" data-orig="${primarySrc}" data-fallback="${fb}" onerror="imgError(this)">`;
+  return `<img src="${primarySrc}" alt="${alt}" data-orig="${primarySrc}" data-fallback="${fb}" onerror="imgError(this)">`;
 }
 
 /* ========= Render cards ========= */
-let _renderSeq = 0;
-function render(){
-  if(!gallery) return;
+let _renderToken = 0;
 
-  const seq = ++_renderSeq; // cancel any previous in-flight chunk render
-  gallery.innerHTML = "";
+function createCard(it){
+  const card = document.createElement('div');
+  card.className = 'card' + (it.cat === 'drinks' ? ' drink' : '');
+  card.dataset.id = it.id;
 
-  const q = (searchText || "").trim().toLowerCase();
-  const filtered = items.filter(it => {
-    const inCat = (cat === "all" ? ALL_TAB_CATS.has(it.cat) : it.cat === cat);
-    if(!inCat) return false;
-    if(!q) return true;
+  const n = it.name?.[lang] || '';
+  const showPrice = it.price != null && String(it.price).trim() !== '';
 
-    const name = (it.name?.[lang] || "").toLowerCase();
-    const desc = (it.desc?.[lang] || "").toLowerCase();
-    return name.includes(q) || desc.includes(q);
-  });
+  const { primary, fallback } = resolveImgSrc(it);
 
-  // Chunked rendering keeps the UI responsive when there are lots of items.
-  const CHUNK = 24;
-  let i = 0;
+  const img = document.createElement('img');
+  // Lazy loading prevents the page from freezing when there are many items/images
+  img.loading = 'lazy';
+  img.decoding = 'async';
+  img.alt = n;
+  img.dataset.orig = primary;
+  img.dataset.fallback = fallback || '';
+  img.onerror = () => imgError(img);
+  img.src = primary;
 
-  function paintChunk(){
-    if(seq !== _renderSeq) return;
-    const frag = document.createDocumentFragment();
+  const nameDiv = document.createElement('div');
+  nameDiv.className = 'cardName';
+  nameDiv.textContent = n;
 
-    for(let c = 0; c < CHUNK && i < filtered.length; c++, i++){
-      const it = filtered[i];
+  card.appendChild(img);
+  card.appendChild(nameDiv);
 
-      const card = document.createElement("div");
-      card.className = "card" + (it.cat === "drinks" ? " drink" : "");
-      card.dataset.id = it.id;
-
-      const n = it.name?.[lang] || "";
-      const showPrice = it.price != null && String(it.price).trim() !== "";
-
-      const priceLine = showPrice
-        ? `<div class="cardPrice">${ui[lang].labels.price}: ${it.price}</div>`
-        : "";
-
-      const { primary, fallback } = resolveImgSrc(it);
-      card.innerHTML = `
-        ${safeImgTag(primary, n, fallback)}
-        <div class="cardName">${n}</div>
-        ${priceLine}
-      `;
-
-      card.addEventListener("click", ()=> showItemDetails(it.id));
-      frag.appendChild(card);
-    }
-
-    gallery.appendChild(frag);
-    if(i < filtered.length) requestAnimationFrame(paintChunk);
+  if (showPrice){
+    const priceDiv = document.createElement('div');
+    priceDiv.className = 'cardPrice';
+    priceDiv.textContent = `${ui[lang].labels.price}: ${it.price}`;
+    card.appendChild(priceDiv);
   }
 
-  paintChunk();
+  return card;
 }
+
+function render(){
+  if(!gallery) return;
+  _renderToken++;
+  const token = _renderToken;
+
+  // Clear fast
+  gallery.textContent = '';
+
+  const q = (searchText || '').trim().toLowerCase();
+  const base = getBaseList();
+
+  // Filter without scanning the full `items` array when possible
+  const filtered = !q
+    ? base
+    : base.filter(it => (it._q?.[lang] || '').includes(q));
+
+  // Chunked rendering to keep UI responsive
+  let i = 0;
+  const CHUNK = 24;
+
+  function pump(){
+    if(token !== _renderToken) return;
+    const frag = document.createDocumentFragment();
+    for(let c = 0; c < CHUNK && i < filtered.length; c++, i++){
+      frag.appendChild(createCard(filtered[i]));
+    }
+    gallery.appendChild(frag);
+
+    if(i < filtered.length){
+      requestAnimationFrame(pump);
+    }
+  }
+
+  requestAnimationFrame(pump);
+}
+
 
 /* ========= Modal ========= */
 let sidebarOverlay, closeSidebarBtn, sidebarPizzaImage, sidebarName, sidebarPrice, sidebarDesc;
