@@ -247,13 +247,14 @@ const items = [
   { id:"side-14", cat:"sides", img:"images/Potato wedges.jpg", name:{ar:"بطاطا ويدجز", en:"Potato wedges"}, desc:{ar:"بطاطا ويدجز بتتبيلة خاصة—مقرمشة وشهية.", en:"Potato wedges with a special seasoning—crispy and delicious."}, price:"2.00" },
   { id:"side-15", cat:"sides", img:"images/salad buffet.jpg", name:{ar:"بوفيه السلطه", en:"salad buffet"}, desc:{ar:"بوفيه سلطة طازج بتشكيلة متنوعة.", en:"A fresh salad buffet with a diverse selection."}, price:"3.50" },
   { id:"side-16", cat:"sides", img:"images/WINGS PARTY.jpg", name:{ar:"حفله الأجنحه", en:"Wings Party"}, desc:{ar:"حفلة الأجنحة—تشكيلة أجنحة مناسبة للمشاركة.", en:"Wings Party—A selection of wings suitable for sharing."}, price:"4.00" },
-  { id:"side-17", cat:"sides", img:"images/1000 ISLAND.png", name:{ar:"صوص ألف جزيره", en:"1000 Island sauce"},price:"0.30" },
-  { id:"side-18", cat:"sides", img:"images/BBQ S.png", name:{ar:"باربكيو صوص ", en:"BBQ sauce"},price:"0.30" },
-  { id:"side-19", cat:"sides", img:"images/BLUE CHEESE S.png", name:{ar:"بلو شيز صوص", en:"Blue cheese"},price:"0.30" },
-  { id:"side-20", cat:"sides", img:"images/GARLIC S.png", name:{ar:"جارليك صوص ", en:"Garlic sauce"},price:"0.30" },
-  { id:"side-21", cat:"sides", img:"images/PIZZZA SAUCE.png", name:{ar:"بيتزا صوص ", en:"Pizza sauce"},price:"0.30" },
-  { id:"side-17", cat:"sides", img:"images/RANCH S.png", name:{ar:" رانش صوص", en:"Ranch sauce"},price:"0.30" },
-  { id:"side-17", cat:"sides", img:"images/SWEET CHILLI S.png", name:{ar:" حار حلو صوص", en:"Sweet chilli sauce"},price:"0.30" },
+  { id:"side-17", cat:"sides", img:"images/1000 ISLAND.png", name:{ar:"صوص ألف جزيره", en:"1000 Island sauce"}, desc:{ar:"المايونيز، الكاتشب، مخلل الخيار الحلو، الخل الأبيض، عصير الليمون، البابريكا، صلصة ورشسترشاير، مسحوق الثوم ومسحوق البصل", en:"Mayonnaise, ketchup, sweet pickle relish, white vinegar, lemon juice, paprika, Worcestershire sauce, garlic powder and onion powder"},price:"0.30" },
+  { id:"side-18", cat:"sides", img:"images/BBQ S.png", name:{ar:"باربكيو صوص ", en:"BBQ sauce"}, desc:{ar:"إمنح وجباتك نكهة مدخنة ورائعة", en:"Sizzling smokey flavor, Give your meals a zesty edge"},price:"0.30" },
+  { id:"side-19", cat:"sides", img:"images/BLUE CHEESE S.png", name:{ar:"بلو شيز صوص", en:"Blue cheese"}, desc:{ar:"صلصة كريمية لاذعة مصنوعة من الجبن الأزرق", en:"A creamy and tangy sauce made with blue cheese"},price:"0.30" },
+  { id:"side-20", cat:"sides", img:"images/GARLIC S.png", name:{ar:"جارليك صوص ", en:"Garlic sauce"}, desc:{ar:"مايونيز غني بنكهة الثوم , طعم ببساطة لا يُنسى", en:"Creamy mayo with a kick of garlic, It’s simply an unforgettable taste"},price:"0.30" },
+  { id:"side-21", cat:"sides", img:"images/PIZZZA SAUCE.png", name:{ar:"بيتزا صوص ", en:"Pizza sauce"}, desc:{ar:"صلصة بيتزا القيصرالشهيرة", en:"Qaysar Pizza Sauce Famous"},price:"0.30" },
+  { id:"side-22", cat:"sides", img:"images/RANCH S.png", name:{ar:" رانش صوص", en:"Ranch sauce"}, desc:{ar:"مصنوع من مزيج من الأعشاب والتوابل، مما يضيف لمسة كريمية لذيذة إلى أي طبق", en:"Made with a blend of herbs and spices,adding a delicious creamy touch to any dish"},price:"0.30" },
+  { id:"side-23", cat:"sides", img:"images/SWEET CHILLI S.png", name:{ar:" حار حلو صوص", en:"Sweet chilli sauce"}, desc:{ar:"صلصة الفلفل الحلو الحارة الخاصة بك، مُعدّة حسب رغبتك.", en:"Your very own spicy sweet chili sauce customized just the way you like it"},price:"0.30" },
+  { id:"side-24", cat:"sides", img:"images/Image-323.jpg", name:{ar:"سلطة الكولسلو", en:"coleslaw"}, desc:{ar:"سلطه الكولسلو المميزة من بيتزا القيصر", en:"Qaysar Pizza signature coleslaw"},price:"1.75" },
  
 
   
