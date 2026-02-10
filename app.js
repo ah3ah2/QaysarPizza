@@ -247,6 +247,15 @@ const items = [
   { id:"side-14", cat:"sides", img:"images/Potato wedges.jpg", name:{ar:"بطاطا ويدجز", en:"Potato wedges"}, desc:{ar:"بطاطا ويدجز بتتبيلة خاصة—مقرمشة وشهية.", en:"Potato wedges with a special seasoning—crispy and delicious."}, price:"2.00" },
   { id:"side-15", cat:"sides", img:"images/salad buffet.jpg", name:{ar:"بوفيه السلطه", en:"salad buffet"}, desc:{ar:"بوفيه سلطة طازج بتشكيلة متنوعة.", en:"A fresh salad buffet with a diverse selection."}, price:"3.50" },
   { id:"side-16", cat:"sides", img:"images/WINGS PARTY.jpg", name:{ar:"حفله الأجنحه", en:"Wings Party"}, desc:{ar:"حفلة الأجنحة—تشكيلة أجنحة مناسبة للمشاركة.", en:"Wings Party—A selection of wings suitable for sharing."}, price:"4.00" },
+  { id:"side-17", cat:"sides", img:"images/1000 ISLAND.png", name:{ar:"صوص ألف جزيره", en:"1000 Island sauce"},price:"0.30" },
+  { id:"side-18", cat:"sides", img:"images/BBQ S.png", name:{ar:"باربكيو صوص ", en:"BBQ sauce"},price:"0.30" },
+  { id:"side-19", cat:"sides", img:"images/BLUE CHEESE S.png", name:{ar:"بلو شيز صوص", en:"Blue cheese"},price:"0.30" },
+  { id:"side-20", cat:"sides", img:"images/GARLIC S.png", name:{ar:"جارليك صوص ", en:"Garlic sauce"},price:"0.30" },
+  { id:"side-21", cat:"sides", img:"images/PIZZZA SAUCE.png", name:{ar:"بيتزا صوص ", en:"Pizza sauce"},price:"0.30" },
+  { id:"side-17", cat:"sides", img:"images/RANCH S.png", name:{ar:" رانش صوص", en:"Ranch sauce"},price:"0.30" },
+  { id:"side-17", cat:"sides", img:"images/SWEET CHILLI S.png", name:{ar:" حار حلو صوص", en:"Sweet chilli sauce"},price:"0.30" },
+ 
+
   
   
 
