@@ -44,109 +44,109 @@ const ui = {
 const items = [
   // pizzas
   {
-    id:"veg-1", cat:"veg", img:"images/خضار-01.jpg",
+    id:"veg-1", cat:"veg", img:"images/خضار-01.png",
     name:{ar:"خضار بيتزا", en:"Veggie Pizza"},
     desc:{ar:"بيتزا نباتية لذيذة مع خضار طازجة وجبنة موتزاريلا. طعم رائع ومكونات صحية.", en:"Delicious veggie pizza with fresh vegetables and mozzarella."},
     price:null
   },
   {
-    id:"meat-1", cat:"meat", img:"images/اللحوم-01.jpg",
+    id:"meat-1", cat:"meat", img:"images/اللحوم-01.png",
     name:{ar:"محبي اللحوم بيتزا", en:"Meat Lovers"},
     desc:{ar:"بيتزا اللحوم الكلاسيكية مع لحم طازج وجبنة موتزاريلا. وجبة مشبعة ولذيذة.", en:"Classic meat pizza with mozzarella. Satisfying and delicious."},
     price:null
   },
   {
-    id:"meat-2", cat:"meat", img:"images/ببروني-01.jpg",
+    id:"meat-2", cat:"meat", img:"images/ببروني-01.png",
     name:{ar:"ببروني بيتزا", en:"Pepperoni"},
     desc:{ar:"بيتزا الببروني الشهية مع ببروني حار وجبنة موتزاريلا. طعم قوي ومميز.", en:"Spicy pepperoni pizza with mozzarella. Strong and distinctive taste."},
     price:null
   },
   {
-    id:"meat-3", cat:"meat", img:"images/الحارة-01.jpg",
+    id:"meat-3", cat:"meat", img:"images/الحارة-01.png",
     name:{ar:"البيتزا الحارة", en:"Hot Pizza"},
     desc:{ar:"البيتزا الحارة لمحبي البيتزا الحاره مجموعه من قطع اللحم مع قطع الفلفل الاخضر الحار ", en:"Hot pizza for lovers of spicy pizza: a selection of meat pieces with green chili peppers"},
     price:null
   },
   {
-    id:"meat-4", cat:"meat", img:"images/MAXICAN BEEF.jpg",
+    id:"meat-4", cat:"meat", img:"images/MAXICAN BEEF.png",
     name:{ar:"بيتزا لحم مكسيكي حار ", en:"Mxican Beef"},
     desc:{ar:"قطع من اللحم المفروم الزاخره بالنكهات مع الهالبينو و التوابل مستوحاه من النكهات المكسيكيه  ", en:"Flavored chunks of minced meat with jalapeños and spices inspired by Mexican flavors"},
     price:null
   },
   {
-    id:"meat-5", cat:"meat", img:"images/رانش ببروني-01.jpg",
+    id:"meat-5", cat:"meat", img:"images/رانش ببروني-01.png",
     name:{ar:"رانش ببروني ", en:"Pepperoni Ranch Sauce"},
     desc:{ar:"بيتزا الببروني المميزه بقاعده من صلصه الرانش", en:"Our signature pepperoni pizza with a ranch dressing base"},
     price:null
   },
   {
-    id:"meat-6", cat:"meat", img:"images/ستيك-01.jpg",
+    id:"meat-6", cat:"meat", img:"images/ستيك-01.png",
     name:{ar:"ستيك بيتزا ", en:"Steak pizza"},
     desc:{ar:"شرائح الستيك مع جبن الموزريلا لتجربه مشبعة و غنية بالنكهات ", en:"Steak slices with mozzarella cheese for a satisfying and flavorful experience"},
     price:null
   },
   {
-    id:"meat-7", cat:"meat", img:"images/سلامي-01.jpg",
+    id:"meat-7", cat:"meat", img:"images/سلامي-01.png",
     name:{ar:"سلامي بيتزا", en:"Salami pizza"},
     desc:{ar:"شرائح سلامي مقرمشه , جبن يذوب و وصوص البيتزا يكمل المشهد .. سهله بس ما تمل منها ", en:"Crispy salami slices, melting cheese, and pizza sauce complete the picture... easy, but you won't get tired of it"},
     price:null
   },
   {
-    id:"sea-1", cat:"sea", img:"images/بيتزا ( رانش كونو تونا )-01.jpg",
+    id:"sea-1", cat:"sea", img:"images/بيتزا ( رانش كونو تونا )-01.png",
     name:{ar:"رانش كونو تونا بيتزا", en:"Ranch Cono Tuna"},
     desc:{ar:"بيتزا بحرية مع تونا طازجة وصلصة رانش. نكهة بحرية مميزة.", en:"Seafood pizza with tuna and ranch sauce."},
     price:null
   },
   {
-    id:"sea-2", cat:"sea", img:"images/كونا تونا-01.jpg",
+    id:"sea-2", cat:"sea", img:"images/كونا تونا-01.png",
     name:{ar:"كونو تونا بيتزا", en:"Cono Tuna"},
     desc:{ar:"بيتزا التونا الكلاسيكية مع تونا وجبنة موتزاريلا. طعم بحري لذيذ.", en:"Classic tuna pizza with mozzarella."},
     price:null
   },
   {
-    id:"chicken-1", cat:"chicken", img:"images/زنجر-01.jpg",
+    id:"chicken-1", cat:"chicken", img:"images/زنجر-01.png",
     name:{ar:"زنجر بيتزا", en:"Zinger"},
     desc:{ar:"بيتزا الدجاج مع قطع دجاج مشوية وجبنة موتزاريلا. وجبة مشبعة ومغذية.", en:"Chicken pizza with mozzarella. Satisfying meal."},
     price:null
   },
   {
-    id:"chicken-2", cat:"chicken", img:"images/الفاهيتا-01.jpg",
+    id:"chicken-2", cat:"chicken", img:"images/الفاهيتا-01.png",
     name:{ar:"فاهيتا بيتزا", en:"Fajita"},
     desc:{ar:"بيتزا الفاهيتا مع دجاج متبل وخضار. نكهة مكسيكية لذيذة.", en:"Fajita pizza with seasoned chicken and vegetables."},
     price:null
   },
   {
-    id:"chicken-3", cat:"chicken", img:"images/الفريدو-01.jpg",
+    id:"chicken-3", cat:"chicken", img:"images/الفريدو-01.png",
     name:{ar:"ألفريدو بيتزا", en:"Alfredo pizza"},
     desc:{ar:"بيتزا ألفريدو بصلصة ألفريدو الكريمية وجبنة موزريلا، بطعم غني وناعم.", en:"Alfredo pizza with creamy Alfredo sauce and mozzarella for a rich, smooth taste."},
     price:null
   },
   {
-    id:"chicken-4", cat:"chicken", img:"images/باربكيو الدجاج-01.jpg",
+    id:"chicken-4", cat:"chicken", img:"images/باربكيو الدجاج-01.png",
     name:{ar:"باربكيو الدجاج", en:"BBQ chicken"},
     desc:{ar:"بيتزا باربكيو الدجاج بقطع دجاج وصوص باربكيو وجبنة موزريلا بطعم مدخّن لذيذ.", en:"BBQ chicken pizza with chicken pieces, BBQ sauce, and mozzarella."},
     price:null
   },
   {
-    id:"chicken-5", cat:"chicken", img:"images/بيتزا الدجاج-01.jpg",
+    id:"chicken-5", cat:"chicken", img:"images/بيتزا الدجاج-01.png",
     name:{ar:"بيتزا الدجاج", en:"Chicken pizza"},
     desc:{ar:"بيتزا الدجاج الكلاسيكية بقطع دجاج وجبنة موزريلا وصلصة بيتزا متوازنة.", en:"Classic chicken pizza with chicken pieces, mozzarella, and our pizza sauce."},
     price:null
   },
   {
-    id:"chicken-6", cat:"chicken", img:"images/سبايسي رانش-01.jpg",
+    id:"chicken-6", cat:"chicken", img:"images/سبايسي رانش-01.png",
     name:{ar:"سبايسي رانش", en:"Spicy Chicken Ranch"},
     desc:{ar:"بيتزا سبايسي رانش بقطع دجاج وصوص رانش حار وجبنة موزريلا لنكهة قوية.", en:"Spicy chicken ranch pizza with mozzarella for a bold kick."},
     price:null
   },
   {
-    id:"chicken-7", cat:"chicken", img:"images/شاورما-01.jpg",
+    id:"chicken-7", cat:"chicken", img:"images/شاورما-01.png",
     name:{ar:"شاورما دجاج", en:"Chicken shawarma"},
     desc:{ar:"بيتزا شاورما الدجاج بقطع شاورما وتتبيلة مميزة مع جبنة موزريلا.", en:"Chicken shawarma pizza with seasoned shawarma and mozzarella."},
     price:null
   },
     {
-    id:"chicken-8", cat:"chicken", img:"images/مكسيكي دجاج-01.jpg",
+    id:"chicken-8", cat:"chicken", img:"images/مكسيكي دجاج-01.png",
     name:{ar:"مكسيكي دجاج", en:"Spicy Mexican Chicken"},
     desc:{ar:"بيتزا دجاج مكسيكي حار بقطع دجاج وتوابل مكسيكية ولمسة حارة.", en:"Spicy Mexican chicken pizza with seasoned chicken and a hot kick."},
     price:null
@@ -155,37 +155,37 @@ const items = [
 
   // selected (featured pizzas)
   {
-    id:"selected-1", cat:"selected", img:"images/الفصول الاربعة.jpg",
+    id:"selected-1", cat:"selected", img:"images/الفصول الاربعة.png",
     name:{ar:"الفصول الاربعة", en:"Four Seasons"},
     desc:{ar:"بيتزا الفصول الأربعة تجمع أربع نكهات مختلفة في بيتزا واحدة لتجربة متنوعة.", en:"Four Seasons pizza with four different flavors in one pizza for a varied taste."},
     price:null
   },
   {
-    id:"selected-2", cat:"selected", img:"images/قيصر بيتزا.jpg",
+    id:"selected-2", cat:"selected", img:"images/قيصر بيتزا.png",
     name:{ar:"قيصر بيتزا", en:"Caesar Pizza"},
     desc:{ar:"قيصر بيتزا (وصفة خاصة) بخلطة القيصر المميزة وجبنة موزريلا وصلصة غنية.", en:"Caesar Pizza (signature recipe) with our special Caesar mix and mozzarella."},
     price:null
   },
   {
-    id:"selected-3", cat:"selected", img:"images/قيصر دجاج.jpg",
+    id:"selected-3", cat:"selected", img:"images/قيصر دجاج.png",
     name:{ar:"قيصر دجاج", en:"Caesar Chicken"},
     desc:{ar:"قيصر دجاج بقطع دجاج وخلطة القيصر الخاصة وجبنة موزريلا بطعم مميز.", en:"Caesar Chicken pizza with chicken, our Caesar mix, and mozzarella."},
     price:null
   },
   {
-    id:"selected-4", cat:"selected", img:"images/مارغريتا.jpg",
+    id:"selected-4", cat:"selected", img:"images/مارغريتا.png",
     name:{ar:"مارغريتا", en:"Margherita"},
     desc:{ar:"مارغريتا الكلاسيكية: صلصة طماطم وجبنة موزريلا ولمسة أعشاب بسيطة.", en:"Classic Margherita with tomato sauce, mozzarella, and a light herb touch."},
     price:null
   },
   {
-    id:"selected-5", cat:"selected", img:"images/تيركي.jpg",
+    id:"selected-5", cat:"selected", img:"images/تيركي.png",
     name:{ar:"تيركي", en:"Turkey"},
     desc:{ar:"بيتزا تيركي بشرائح تيركي وجبنة موزريلا لوجبة خفيفة ومشبعة.", en:"Turkey pizza with turkey slices and mozzarella—light yet satisfying."},
     price:null
   },
   {
-    id:"selected-6", cat:"selected", img:"images/الهوت دوج-01.jpg",
+    id:"selected-6", cat:"selected", img:"images/الهوت دوج-01.png",
     name:{ar:"هوت دوغ بيتزا", en:"Hot Dog Pizza"},
     desc:{ar:"هوت دوغ بيتزا بقطع هوت دوغ وجبنة موزريلا—خيار ممتع ومختلف.", en:"Hot Dog pizza with hot dog pieces and mozzarella—fun and different."},
     price:null
@@ -193,31 +193,31 @@ const items = [
 
   // sandwiches
   {
-    id:"sand-1", cat:"sandwiches", img:"images/جبنه الموزريلا.jpg",
+    id:"sand-1", cat:"sandwiches", img:"images/جبنه الموزريلا.png",
     name:{ar:"جبنه الموزريلا", en:"Mozzarella Cheese"},
     desc:{ar:"ساندويش جبنة الموزريلا بجبنة غنية وطعم كريمي مناسب كوجبة خفيفة.", en:"Mozzarella cheese sandwich with a rich, creamy taste—perfect for a quick bite."},
     price:"3.50"
   },
   {
-    id:"sand-2", cat:"sandwiches", img:"images/الدجاج المشوي.jpg",
+    id:"sand-2", cat:"sandwiches", img:"images/الدجاج المشوي.png",
     name:{ar:"الدجاج المشوي", en:"Grilled Chicken"},
     desc:{ar:"ساندويش الدجاج المشوي بقطع دجاج مشوي وتتبيلة خفيفة وطعم متوازن.", en:"Grilled chicken sandwich with seasoned grilled chicken for a balanced flavor."},
     price:"3.50"
   },
   {
-    id:"sand-3", cat:"sandwiches", img:"images/شاورما.jpg",
+    id:"sand-3", cat:"sandwiches", img:"images/شاورما.png",
     name:{ar:"شاورما", en:"Shawarma"},
     desc:{ar:"ساندويش شاورما بتتبيلة شاورما مميزة ونكهة شرقية محببة.", en:"Shawarma sandwich with signature shawarma seasoning and a Middle Eastern flavor."},
     price:"3.50"
   },
   {
-    id:"sand-4", cat:"sandwiches", img:"images/السلامي.jpg",
+    id:"sand-4", cat:"sandwiches", img:"images/السلامي.png",
     name:{ar:"السلامي", en:"Salami"},
     desc:{ar:"ساندويش السلامي بشرائح سلامي وجبنة بطعم غني ومشبع.", en:"Salami sandwich with salami slices and cheese—rich and satisfying."},
     price:"3.50"
   },
   {
-    id:"sand-5", cat:"sandwiches", img:"images/تيركي مدخن.jpg",
+    id:"sand-5", cat:"sandwiches", img:"images/تيركي مدخن.png",
     name:{ar:"تيركي مدخن", en:"Smoked Turkey"},
     desc:{ar:"ساندويش تيركي مدخن بشرائح تيركي مدخن ونكهة مدخّنة لطيفة.", en:"Smoked turkey sandwich with smoked turkey slices and a gentle smoky flavor."},
     price:"3.50"
@@ -231,22 +231,22 @@ const items = [
 
 
   // sides
-  { id:"side-1", cat:"sides", img:"images/sweet chilli wings.jpg", name:{ar:"اجنحة حار حلو صوص", en:"Sweet & Spicy Wings"}, desc:{ar:"أجنحة دجاج بصوص سويت تشيلي—مزيج حلو وحار بطعم لذيذ.", en:"Chicken wings tossed in a sweet and spicy sauce."}, price:"2.70" },
-  { id:"side-2", cat:"sides", img:"images/wings BBQ.jpg", name:{ar:"اجنحة باربكيو صوص", en:"BBQ Wings"}, desc:{ar:"أجنحة دجاج بصوص باربكيو غني—نكهة مدخّنة ومحبة للجميع.", en:"Juicy chicken wings coated with rich BBQ sauce."}, price:"2.70" },
-  { id:"side-3", cat:"sides", img:"images/boneless.jpg", name:{ar:"اجنحة بدون عظم", en:"Boneless Wings"}, desc:{ar:"قطع دجاج بدون عظم مقرمشة وسهلة الأكل—مناسبة للمشاركة.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"2.70" },
-  { id:"side-5", cat:"sides", img:"images/oreintal wings_Artboard 1 copy 6.jpg", name:{ar:"اجنحة شرقيه", en:"Oriental Wings"}, desc:{ar:"أجنحة شرقية بتتبيلة خاصة ونكهات عربية مميزة.", en:"Chicken wings seasoned with oriental spices."}, price:"2.70" },
-  { id:"side-4", cat:"sides", img:"images/4x4.jpg", name:{ar:"4x4", en:"4x4"}, desc:{ar:"وجبة 4×4 مناسبة للمشاركة—خيار مشبع وممتع.", en:"4x4 meal suitable for sharing—a satisfying and enjoyable option."}, price:"4.00" },
-  { id:"side-6", cat:"sides", img:"images/cheese garlic bread.jpg", name:{ar:"خبز بالجبنه و الثوم", en:"cheese garlic bread"}, desc:{ar:"خبز بالثوم والجبنة—مقرمش من الأطراف وغني بالجبنة.", en:"Garlic and cheese bread—crispy on the edges and rich in cheese."}, price:"1.75" },
-  { id:"side-7", cat:"sides", img:"images/french fries.jpg", name:{ar:"بطاطا فرايز", en:"french fries"}, desc:{ar:"بطاطا فرايز مقرمشة—خفيفة ولذيذة.", en:"Crispy potato fries—light and delicious."}, price:"1.00" },
-  { id:"side-8", cat:"sides", img:"images/garlic bread.jpg", name:{ar:"خبز بالثوم", en:"garlic bread"}, desc:{ar:"خبز بالثوم بطعم غني ولمسة زبدة.", en:"Garlic bread with a rich flavor and a touch of butter."}, price:"1.00" },
-  { id:"side-9", cat:"sides", img:"images/lasagnia.jpg", name:{ar:"لزانيا", en:"lasagnia"}, desc:{ar:"لازانيا بصلصة غنية وجبنة ذائبة—وجبة مشبعة.", en:"Lasagna with a rich sauce and melted cheese—a filling meal."}, price:"4.00" },
-  { id:"side-10", cat:"sides", img:"images/mozarella sticks.jpg", name:{ar:"موزريلا ستيك", en:"mozarella sticks"}, desc:{ar:"أصابع موزريلا مقرمشة بجبنة ذائبة من الداخل.", en:"Crispy mozzarella sticks with melted cheese inside."}, price:"2.25" },
-  { id:"side-11", cat:"sides", img:"images/msahab chicken.jpg", name:{ar:"دجاج مسحب", en:"msahab chicken"}, desc:{ar:"دجاج مسحب مقرمش—مناسب كوجبة جانبية.", en:"Crispy pulled chicken—suitable as a side dish."}, price:"2.25" },
-  { id:"side-12", cat:"sides", img:"images/nuggets.jpg", name:{ar:"نجيتس ", en:"nuggets"}, desc:{ar:"نجتس دجاج مقرمشة—خيار خفيف وسريع.", en:"Crispy chicken nuggets—a light and quick option."}, price:"2.25" },
-  { id:"side-13", cat:"sides", img:"images/pepproni garlic bread.jpg", name:{ar:"خبز بالثوم بالجبنه مع الببروني", en:"pepproni garlic cheese bread"}, desc:{ar:"خبز بالثوم والجبنة مع ببروني—نكهة أقوى ولمسة مميزة.", en:"Garlic bread and cheese with pepperoni—a stronger flavor and a distinctive touch."}, price:"1.75" },
-  { id:"side-14", cat:"sides", img:"images/Potato wedges.jpg", name:{ar:"بطاطا ويدجز", en:"Potato wedges"}, desc:{ar:"بطاطا ويدجز بتتبيلة خاصة—مقرمشة وشهية.", en:"Potato wedges with a special seasoning—crispy and delicious."}, price:"2.00" },
-  { id:"side-15", cat:"sides", img:"images/salad buffet.jpg", name:{ar:"بوفيه السلطه", en:"salad buffet"}, desc:{ar:"بوفيه سلطة طازج بتشكيلة متنوعة.", en:"A fresh salad buffet with a diverse selection."}, price:"3.50" },
-  { id:"side-16", cat:"sides", img:"images/WINGS PARTY.jpg", name:{ar:"حفله الأجنحه", en:"Wings Party"}, desc:{ar:"حفلة الأجنحة—تشكيلة أجنحة مناسبة للمشاركة.", en:"Wings Party—A selection of wings suitable for sharing."}, price:"4.00" },
+  { id:"side-1", cat:"sides", img:"images/sweet chilli wings.png", name:{ar:"اجنحة حار حلو صوص", en:"Sweet & Spicy Wings"}, desc:{ar:"أجنحة دجاج بصوص سويت تشيلي—مزيج حلو وحار بطعم لذيذ.", en:"Chicken wings tossed in a sweet and spicy sauce."}, price:"2.70" },
+  { id:"side-2", cat:"sides", img:"images/wings BBQ.png", name:{ar:"اجنحة باربكيو صوص", en:"BBQ Wings"}, desc:{ar:"أجنحة دجاج بصوص باربكيو غني—نكهة مدخّنة ومحبة للجميع.", en:"Juicy chicken wings coated with rich BBQ sauce."}, price:"2.70" },
+  { id:"side-3", cat:"sides", img:"images/boneless.png", name:{ar:"اجنحة بدون عظم", en:"Boneless Wings"}, desc:{ar:"قطع دجاج بدون عظم مقرمشة وسهلة الأكل—مناسبة للمشاركة.", en:"Crispy boneless chicken wings, easy to enjoy."}, price:"2.70" },
+  { id:"side-5", cat:"sides", img:"images/oreintal wings_Artboard 1 copy 6.png", name:{ar:"اجنحة شرقيه", en:"Oriental Wings"}, desc:{ar:"أجنحة شرقية بتتبيلة خاصة ونكهات عربية مميزة.", en:"Chicken wings seasoned with oriental spices."}, price:"2.70" },
+  { id:"side-4", cat:"sides", img:"images/4x4.png", name:{ar:"4x4", en:"4x4"}, desc:{ar:"وجبة 4×4 مناسبة للمشاركة—خيار مشبع وممتع.", en:"4x4 meal suitable for sharing—a satisfying and enjoyable option."}, price:"4.00" },
+  { id:"side-6", cat:"sides", img:"images/cheese garlic bread.png", name:{ar:"خبز بالجبنه و الثوم", en:"cheese garlic bread"}, desc:{ar:"خبز بالثوم والجبنة—مقرمش من الأطراف وغني بالجبنة.", en:"Garlic and cheese bread—crispy on the edges and rich in cheese."}, price:"1.75" },
+  { id:"side-7", cat:"sides", img:"images/french fries.png", name:{ar:"بطاطا فرايز", en:"french fries"}, desc:{ar:"بطاطا فرايز مقرمشة—خفيفة ولذيذة.", en:"Crispy potato fries—light and delicious."}, price:"1.00" },
+  { id:"side-8", cat:"sides", img:"images/garlic bread.png", name:{ar:"خبز بالثوم", en:"garlic bread"}, desc:{ar:"خبز بالثوم بطعم غني ولمسة زبدة.", en:"Garlic bread with a rich flavor and a touch of butter."}, price:"1.00" },
+  { id:"side-9", cat:"sides", img:"images/lasagnia.png", name:{ar:"لزانيا", en:"lasagnia"}, desc:{ar:"لازانيا بصلصة غنية وجبنة ذائبة—وجبة مشبعة.", en:"Lasagna with a rich sauce and melted cheese—a filling meal."}, price:"4.00" },
+  { id:"side-10", cat:"sides", img:"images/mozarella sticks.png", name:{ar:"موزريلا ستيك", en:"mozarella sticks"}, desc:{ar:"أصابع موزريلا مقرمشة بجبنة ذائبة من الداخل.", en:"Crispy mozzarella sticks with melted cheese inside."}, price:"2.25" },
+  { id:"side-11", cat:"sides", img:"images/msahab chicken.png", name:{ar:"دجاج مسحب", en:"msahab chicken"}, desc:{ar:"دجاج مسحب مقرمش—مناسب كوجبة جانبية.", en:"Crispy pulled chicken—suitable as a side dish."}, price:"2.25" },
+  { id:"side-12", cat:"sides", img:"images/nuggets.png", name:{ar:"نجيتس ", en:"nuggets"}, desc:{ar:"نجتس دجاج مقرمشة—خيار خفيف وسريع.", en:"Crispy chicken nuggets—a light and quick option."}, price:"2.25" },
+  { id:"side-13", cat:"sides", img:"images/pepproni garlic bread.png", name:{ar:"خبز بالثوم بالجبنه مع الببروني", en:"pepproni garlic cheese bread"}, desc:{ar:"خبز بالثوم والجبنة مع ببروني—نكهة أقوى ولمسة مميزة.", en:"Garlic bread and cheese with pepperoni—a stronger flavor and a distinctive touch."}, price:"1.75" },
+  { id:"side-14", cat:"sides", img:"images/Potato wedges.png", name:{ar:"بطاطا ويدجز", en:"Potato wedges"}, desc:{ar:"بطاطا ويدجز بتتبيلة خاصة—مقرمشة وشهية.", en:"Potato wedges with a special seasoning—crispy and delicious."}, price:"2.00" },
+  { id:"side-15", cat:"sides", img:"images/salad buffet.png", name:{ar:"بوفيه السلطه", en:"salad buffet"}, desc:{ar:"بوفيه سلطة طازج بتشكيلة متنوعة.", en:"A fresh salad buffet with a diverse selection."}, price:"3.50" },
+  { id:"side-16", cat:"sides", img:"images/WINGS PARTY.png", name:{ar:"حفله الأجنحه", en:"Wings Party"}, desc:{ar:"حفلة الأجنحة—تشكيلة أجنحة مناسبة للمشاركة.", en:"Wings Party—A selection of wings suitable for sharing."}, price:"4.00" },
   { id:"side-17", cat:"sides", img:"images/1000 ISLAND.png", name:{ar:"صوص ألف جزيره", en:"1000 Island sauce"}, desc:{ar:"المايونيز، الكاتشب، مخلل الخيار الحلو، الخل الأبيض، عصير الليمون، البابريكا، صلصة ورشسترشاير، مسحوق الثوم ومسحوق البصل", en:"Mayonnaise, ketchup, sweet pickle relish, white vinegar, lemon juice, paprika, Worcestershire sauce, garlic powder and onion powder"},price:"0.30" },
   { id:"side-18", cat:"sides", img:"images/BBQ S.png", name:{ar:"باربكيو صوص ", en:"BBQ sauce"}, desc:{ar:"إمنح وجباتك نكهة مدخنة ورائعة", en:"Sizzling smokey flavor, Give your meals a zesty edge"},price:"0.30" },
   { id:"side-19", cat:"sides", img:"images/BLUE CHEESE S.png", name:{ar:"بلو شيز صوص", en:"Blue cheese"}, desc:{ar:"صلصة كريمية لاذعة مصنوعة من الجبن الأزرق", en:"A creamy and tangy sauce made with blue cheese"},price:"0.30" },
@@ -261,12 +261,12 @@ const items = [
   
 
   // new
-  { id:"new-1", cat:"new", img:"images/عالماشي الفريدو-01.jpg", name:{ar:"عالماشي الفريدو", en:"Almashi Alfredo"}, desc:{ar:"عالماشي ألفريدو—خيار سريع بطعم ألفريدو الكريمي.", en:"Almashi Alfredo—an on-the-go option with creamy Alfredo flavor."}, price:"2.5" },
-  { id:"new-2", cat:"new", img:"images/عالماشي ببروني-01.jpg", name:{ar:"عالماشي ببروني", en:"Almashi Pepperoni"}, desc:{ar:"عالماشي ببروني—خيار سريع بنكهة ببروني مميزة.", en:"Almashi Pepperoni—an on-the-go option with pepperoni flavor."}, price:"2.5" },
-  { id:"new-3", cat:"new", img:"images/عالماشي خضار-01.jpg", name:{ar:"عالماشي خضار", en:"Almashi Veggie"}, desc:{ar:"عالماشي خضار—خيار سريع بخضار طازجة وجبنة.", en:"Almashi Veggie—an on-the-go option with veggies and cheese."}, price:"2.5" },
-  { id:"new-4", cat:"new", img:"images/عالماشي زنجر-01.jpg", name:{ar:"عالماشي زنجر", en:"Almashi Zinger"}, desc:{ar:"عالماشي زنجر—خيار سريع بنكهة زنجر.", en:"Almashi Zinger—an on-the-go option with zinger flavor."}, price:"2.5" },
-  { id:"new-5", cat:"new", img:"images/عالماشي ستيك-01.jpg", name:{ar:"عالماشي ستيك", en:"Almashi Steak"}, desc:{ar:"عالماشي ستيك—خيار سريع بنكهة ستيك غنية.", en:"Almashi Steak—an on-the-go option with a rich steak flavor."}, price:"2.5" },
-  { id:"new-6", cat:"new", img:"images/عالماشي شاورما-01.jpg", name:{ar:"عالماشي شاورما", en:"Almashi Shawarma"}, desc:{ar:"عالماشي شاورما—خيار سريع بتتبيلة شاورما.", en:"Almashi Shawarma—an on-the-go option with shawarma seasoning."}, price:"2.5" },
+  { id:"new-1", cat:"new", img:"images/عالماشي الفريدو-01.png", name:{ar:"عالماشي الفريدو", en:"Almashi Alfredo"}, desc:{ar:"عالماشي ألفريدو—خيار سريع بطعم ألفريدو الكريمي.", en:"Almashi Alfredo—an on-the-go option with creamy Alfredo flavor."}, price:"2.5" },
+  { id:"new-2", cat:"new", img:"images/عالماشي ببروني-01.png", name:{ar:"عالماشي ببروني", en:"Almashi Pepperoni"}, desc:{ar:"عالماشي ببروني—خيار سريع بنكهة ببروني مميزة.", en:"Almashi Pepperoni—an on-the-go option with pepperoni flavor."}, price:"2.5" },
+  { id:"new-3", cat:"new", img:"images/عالماشي خضار-01.png", name:{ar:"عالماشي خضار", en:"Almashi Veggie"}, desc:{ar:"عالماشي خضار—خيار سريع بخضار طازجة وجبنة.", en:"Almashi Veggie—an on-the-go option with veggies and cheese."}, price:"2.5" },
+  { id:"new-4", cat:"new", img:"images/عالماشي زنجر-01.png", name:{ar:"عالماشي زنجر", en:"Almashi Zinger"}, desc:{ar:"عالماشي زنجر—خيار سريع بنكهة زنجر.", en:"Almashi Zinger—an on-the-go option with zinger flavor."}, price:"2.5" },
+  { id:"new-5", cat:"new", img:"images/عالماشي ستيك-01.png", name:{ar:"عالماشي ستيك", en:"Almashi Steak"}, desc:{ar:"عالماشي ستيك—خيار سريع بنكهة ستيك غنية.", en:"Almashi Steak—an on-the-go option with a rich steak flavor."}, price:"2.5" },
+  { id:"new-6", cat:"new", img:"images/عالماشي شاورما-01.png", name:{ar:"عالماشي شاورما", en:"Almashi Shawarma"}, desc:{ar:"عالماشي شاورما—خيار سريع بتتبيلة شاورما.", en:"Almashi Shawarma—an on-the-go option with shawarma seasoning."}, price:"2.5" },
 
   // offers (Qaysar Offers)
   { id:"offer-1", cat:"offers", img:"images/offer1.jpg", name:{ar:"العرض الثلاثي صغير", en:"Offer 3 Small Pizza"},  desc:{ar:"", en:""}, price:"5.50" },
