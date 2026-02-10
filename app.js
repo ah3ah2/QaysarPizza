@@ -86,7 +86,7 @@ const items = [
     price:null
   },
   {
-    id:"meat-7", cat:"meat", img:"images/سلامي-01.jpg",
+    id:"meat-7", cat:"meat", img:"images/سلامي.jpg",
     name:{ar:"سلامي بيتزا", en:"Salami pizza"},
     desc:{ar:"شرائح سلامي مقرمشه , جبن يذوب و وصوص البيتزا يكمل المشهد .. سهله بس ما تمل منها ", en:"Crispy salami slices, melting cheese, and pizza sauce complete the picture... easy, but you won't get tired of it"},
     price:null
