@@ -224,8 +224,8 @@ const items = [
   },
   {
     id:"sand-6", cat:"sandwiches", img:"images/ZINGER SANDWICH.png",
-    name:{ar:"تيركي مدخن", en:"Smoked Turkey"},
-    desc:{ar:"ساندويش تيركي مدخن بشرائح تيركي مدخن ونكهة مدخّنة لطيفة.", en:"Smoked turkey sandwich with smoked turkey slices and a gentle smoky flavor."},
+    name:{ar:"زنجر ", en:"Zinger sandwich"},
+    desc:{ar:"ساندويش دجاج زنجر بشرائح تيركي مدخن يعطي اثاره لحاسه التذوق لديك", en:" Zinger chicken sandwich with smoked turkey slices will tantalize your taste buds."},
     price:"3.50"
   },
 
