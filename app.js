@@ -291,7 +291,7 @@ const items = [
   { id:"drink-6", cat:"drinks", img:"images/Small size water.png",   name:{ar:"مياه حجم صغير",   en:"Small size water "},   desc:{ar:"مياه حجم صغير—للترطيب السريع.", en:"Small water bottle—quick hydration."}, price:"0.25" },
   { id:"drink-7", cat:"drinks", img:"images/Orange Juice.png",   name:{ar:"عصير برتقال ",   en:"Orange Juice "},   desc:{ar:"عصير برتقال—طعم فواكه منعش.", en:"Orange juice—fresh fruity taste."}, price:"0.35" },
   { id:"drink-8", cat:"drinks", img:"images/Apple Juice.png",   name:{ar:"عصير تفاح ",   en:"Apple Juice "},   desc:{ar:"عصير تفاح—طعم فواكه منعش.", en:"Apple juice—fresh fruity taste."}, price:"0.35" },
-  { id:"drink-9", cat:"drinks", img:"images/Original Soft drink 1 Liter.png",   name:{ar:"مشروب غازي اورجينال 1 لتر",   en:"Original Soft drink 1 Liter "},   desc:{ar:"مشروب غازي أورجينال 1 لتر—حجم عائلي.", en:"Original soft drink 1 liter—family size."}, price:"0.75" },
+  { id:"drink-9", cat:"drinks", img:"images/Original Soft drink 1 Liter.png",   name:{ar:"مشروب غازي اورجينال 1 لتر",   en:"Original Soft drink 1 Liter "},   desc:{ar:"مشروب غازي أورجينال 1 لتر—حجم عائلي.", en:"Original soft drink 1 liter—family size."}, price:"0.81" },
 ];
 
 /* ========= State ========= */
