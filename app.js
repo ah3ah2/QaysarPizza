@@ -918,3 +918,67 @@ initSidebar();
 const savedLang = localStorage.getItem("qaysar_lang") || "ar";
 applyLang(savedLang);
 if (langBtn) langBtn.textContent = savedLang === "ar" ? "English" : "العربية";
+/* ========= Instagram Smart Open (Normal -> Lite -> Web fallback) ========= */
+(function () {
+  const links = document.querySelectorAll(".js-instagram-smart");
+  if (!links.length) return;
+
+  const ua = navigator.userAgent || "";
+  const isAndroid = /android/i.test(ua);
+  const isIOS =
+    /iPad|iPhone|iPod/.test(ua) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+  links.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      // خلي سلوك فتح تبويب جديد طبيعي إذا المستخدم ضغط Ctrl/Cmd/Shift
+      if (e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1) return;
+
+      e.preventDefault();
+
+      const username = (this.dataset.username || "qaysarpizza").trim();
+      const webUrl = `https://www.instagram.com/${encodeURIComponent(username)}/`;
+      const appSchemeUrl = `instagram://user?username=${encodeURIComponent(username)}`;
+
+      let didHide = false;
+      const onVisibility = () => {
+        if (document.hidden) didHide = true;
+      };
+      document.addEventListener("visibilitychange", onVisibility, { once: true });
+
+      if (isAndroid) {
+        // Instagram normal
+        const intentNormal =
+          `intent://instagram.com/_u/${encodeURIComponent(username)}` +
+          `#Intent;scheme=https;package=com.instagram.android;S.browser_fallback_url=${encodeURIComponent(webUrl)};end`;
+
+        // Instagram lite
+        const intentLite =
+          `intent://instagram.com/_u/${encodeURIComponent(username)}` +
+          `#Intent;scheme=https;package=com.instagram.lite;S.browser_fallback_url=${encodeURIComponent(webUrl)};end`;
+
+        window.location.href = intentNormal;
+
+        setTimeout(() => {
+          if (!didHide) window.location.href = intentLite;
+        }, 700);
+
+        setTimeout(() => {
+          if (!didHide) window.location.href = webUrl;
+        }, 1400);
+
+      } else if (isIOS) {
+        // iOS: app scheme then web fallback
+        window.location.href = appSchemeUrl;
+
+        setTimeout(() => {
+          if (!didHide) window.location.href = webUrl;
+        }, 1100);
+
+      } else {
+        // Desktop / others
+        window.location.href = webUrl;
+      }
+    });
+  });
+})();
