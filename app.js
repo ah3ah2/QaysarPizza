@@ -498,6 +498,8 @@ const BRANCHES = [
   { ar:"مادبا", en:"Madaba", dest_ar:"بيتزا القيصر مادبا", dest_en:"Qaysar Pizza Madaba", aliases:["madaba","مادبا"] },
   { ar:"السلط", en:"Salt", dest_ar:"بيتزا القيصر السلط", dest_en:"Qaysar Pizza Salt", aliases:["salt","as-salt","السلط"] },
   { ar:"العقبه", en:"Aqaba", dest_ar:"بيتزا القيصر العقبة", dest_en:"Qaysar Pizza Aqaba", aliases:["aqaba","العقبة","العقبه"] },
+  { ar:"سيتي مول",en:"City Mall",dest_ar:"بيتزا القيصر سيتي مول", dest_en:"Qaysar Pizza City Mall", aliases:["city mall", "سيتي مول", "ستي مول", "citymall"] },
+
 ];
 
 // Deduplicate branches (safety)
