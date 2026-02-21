@@ -280,6 +280,7 @@ const items = [
   { id:"offer-7", cat:"offers", img:"images/offer7.jpg", name:{ar:"العرض الفردي صغير", en:"Offer 1 Small Pizza"},  desc:{ar:"", en:""}, price:"3.00" },
   { id:"offer-8", cat:"offers", img:"images/offer8.jpg", name:{ar:"العرض الفردي وسط",  en:"Offer 1 Medium Pizza"}, desc:{ar:"", en:""}, price:"5.00" },
   { id:"offer-9", cat:"offers", img:"images/offer9.jpg", name:{ar:"العرض الفردي كبير", en:"Offer 1 Large Pizza"},  desc:{ar:"", en:""}, price:"7.50" },
+  { id:"offer-10", cat:"offers", img:"images/RAMADAN.jpg", name:{ar:"عرض رمضان", en:"Ramadan offer"},  desc:{ar:"", en:""} },
 
 
   // drinks
