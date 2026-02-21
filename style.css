@@ -79,7 +79,7 @@ body > *{position:relative; z-index:1;}
 #introLogo video{
   width:100%;
   height:100%;
-  object-fit:cover;
+  object-fit:contain;
 }
 
 @keyframes introFade{
