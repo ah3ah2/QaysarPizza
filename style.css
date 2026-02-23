@@ -69,11 +69,11 @@ body > *{position:relative; z-index:1;}
 /* Intro */
 #introLogo{
   position:fixed; inset:0;
-  background:#35a249;
+  background:#207830;
   display:flex; align-items:center; justify-content:center;
   z-index:10000;
   pointer-events:none;
-  animation:introFade 0.3s ease forwards 6s;
+  animation:introFade 0.3s ease forwards 10s;
 }
 
 #introLogo video{
