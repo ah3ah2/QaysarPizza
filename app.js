@@ -280,8 +280,8 @@ const items = [
   { id:"offer-7", cat:"offers", img:"images/offer7.jpg", name:{ar:"العرض الفردي صغير", en:"Offer 1 Small Pizza"},  desc:{ar:"", en:""}, price:"3.00" },
   { id:"offer-8", cat:"offers", img:"images/offer8.jpg", name:{ar:"العرض الفردي وسط",  en:"Offer 1 Medium Pizza"}, desc:{ar:"", en:""}, price:"5.00" },
   { id:"offer-9", cat:"offers", img:"images/offer9.jpg", name:{ar:"العرض الفردي كبير", en:"Offer 1 Large Pizza"},  desc:{ar:"", en:""}, price:"7.50" },
-  { id:"offer-10", cat:"offers", img:"images/nash.jpg", name:{ar:"عرض النشامى", en:"Nashama offer"}, desc:{ar:"", en:""}, price:"12.99" },
-  { id:"offer-11", cat:"offers", img:"images/abtal.jpg", name:{ar:"عرض الابطال", en:"Heroes offer"}, desc:{ar:"", en:""}, price:"8.99" },
+  { id:"offer-10", cat:"offers", img:"images/nash.jpg", name:{ar:"فطور النشامى", en:"Nashama Breakfast"}, desc:{ar:"", en:""}, price:"12.99" },
+  { id:"offer-11", cat:"offers", img:"images/abtal.jpg", name:{ar:"فطور الابطال", en:"Heroes Breakfast"}, desc:{ar:"", en:""}, price:"8.99" },
   
 
 
